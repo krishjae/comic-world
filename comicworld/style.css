@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bangers', sans-serif; /* Applying Bangers font throughout */
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 2;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Change the color on hover */
+}
+
+.subscribe {
+    padding: 5px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background and text transition */
+}
+
+.subscribe:hover {
+    background-color: #f39c12; /* Change background color on hover */
+    color: #1b1b1b; /* Change text color on hover */
+}
+
+.hero-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.batman-main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.batman-img {
+    max-height: 60vh;
+    max-width: 1000px; /* Adjusted size */
+    width: auto;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.batman-img:hover {
+    opacity: 0.5; /* Adjust the transparency level (0 is fully transparent, 1 is fully opaque) */
+}
+
+.batman-title {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+}
+
+.batman-anniversary {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and text */
+    margin-top: 20px;
+    margin-left: 80px;
+    color: #ffffff;
+}
+
+.anniversary-logo {
+    height: 200px;
+    border: 1px solid #ffffff; /* Add a border to the logo */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px; /* Optional: space inside the border */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+}
+
+.batman-anniversary p {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Character Facts Section */
+.character-facts {
+    position: relative;
+    background-image: url('batjoc.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    padding: 60px; /* Increase padding for larger spacing */
+    color: white; /* Ensure text contrast */
+    margin: 50px auto; /* Increase margin for better spacing */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    max-width: 1000px; /* Increase max-width for a larger div */
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem; /* Increase heading size */
+    margin-bottom: 25px; /* Increase space below heading */
+}
+
+.facts-list li {
+    margin: 15px 0; /* Increase spacing between list items */
+    font-size: 1.6rem; /* Increase font size for facts */
+}
+
+.batmobile-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow if content exceeds */
+}
+
+.batmobile-background {
+    position: relative;
+    width: 100%;
+}
+
+.batmobile-background-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure it covers the section */
+    filter: brightness(0.6); /* Darken the background for better text visibility */
+}
+
+.batmobile-info {
+    position: absolute;
+    top: 20%; /* Adjust this value to position the info */
+    left: 5%; /* Positioning from the left corner */
+    padding: 20px; /* Add some padding */
+    color: #ffffff; /* Text color for contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    max-width: 300px; /* Limit the width */
+    text-align: left; /* Align text to the left */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.batmobile-specs {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.batmobile-specs li {
+    margin: 10px 0; /* Spacing between list items */
+    font-size: 1.2rem; /* Font size for specs */
+}
+
+.batman-images {
+    padding: 40px 20px; /* Add padding for spacing */
+    background-color: #1b1b1b; /* Background color to match the theme */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center the heading */
+}
+
+.batman-grid {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.action-scene-container {
+    margin: 20px 0; /* Space between images */
+}
+
+.batman-img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.batman-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.footer {
+    position: relative; /* Allows for positioning of child elements */
+    height: 350px; /* Set a fixed height for the footer */
+    background-image: url('bat100.jpg'); /* Change this to your desired image */
+    background-size: cover; /* Ensures the background image covers the entire footer */
+    background-position: center; /* Centers the background image */
+    display: flex; /* Enables flexbox for centering content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center text alignment */
+}
+
+.footer-content {
+    padding: 20px; /* Add padding around the content */
+}
+
